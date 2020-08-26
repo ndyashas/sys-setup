@@ -1,7 +1,7 @@
 #########################################################################
 # This file contains the global variables for logging, install-dir etc. #
 # additionally, information and error logging wrappers are also defined #
-# in this file.														    #
+# in this file.                                                         #
 #########################################################################
 
 
@@ -24,9 +24,9 @@ INFO_MSG=${INFO_COLOR}"[INFO]"${NO_COLOR}
 ## Function for setting up the infrastructre for logging messages.
 setup_logging()
 {
-	mkdir -p ${LOG_DIR}
-	touch ${LOG_FILE}
-	chown -R ${SUDO_USER} ${LOG_DIR}
+    mkdir -p ${LOG_DIR}
+    touch ${LOG_FILE}
+    chown -R ${SUDO_USER} ${LOG_DIR}
 }
 
 ## Wrapper for the echo message which adds colored prefix to info-messages.
@@ -35,16 +35,16 @@ setup_logging()
 ## needs to be highlighted.
 print_info_message()
 {
-	echo -e "[INFO]  ${1}" 1>>${LOG_FILE}
+    echo -e "[INFO]  ${1}" 1>>${LOG_FILE}
 
-	# Colorise the message.
-	to_print="${INFO_MSG}  ${1}"
-	if [ -n "$2" ]; then
-		to_print="${to_print//$2/${INFO_COLOR_2}$2${NO_COLOR}}"
-	fi
+    # Colorise the message.
+    to_print="${INFO_MSG}  ${1}"
+    if [ -n "$2" ]; then
+        to_print="${to_print//$2/${INFO_COLOR_2}$2${NO_COLOR}}"
+    fi
 
-	echo -e "${to_print}"
-	return 0
+    echo -e "${to_print}"
+    return 0
 }
 
 ## Wrapper for the echo message which adds colored prefix to error-messages.
@@ -54,28 +54,28 @@ print_info_message()
 print_error_message()
 {
 
-	echo -e "[ERROR] ${1}\n" 1>>${LOG_FILE}
+    echo -e "[ERROR] ${1}\n" 1>>${LOG_FILE}
 
-	# Colorise the message.
-	to_print="${ERROR_MSG} ${1}"
-	if [ -n "$2" ]; then
-		to_print="${to_print//$2/${INFO_COLOR_2}$2${NO_COLOR}}"
-	fi
+    # Colorise the message.
+    to_print="${ERROR_MSG} ${1}"
+    if [ -n "$2" ]; then
+        to_print="${to_print//$2/${INFO_COLOR_2}$2${NO_COLOR}}"
+    fi
 
-	echo -e "${to_print}. Please see the log file at ${LOG_FILE} for more information.\n" 1>&2
-	return 0
+    echo -e "${to_print}. Please see the log file at ${LOG_FILE} for more information.\n" 1>&2
+    return 0
 }
 
 ## Wrapper for the echo message which is displayed at the starting of a phase
 print_section_start_message()
 {
-	to_print="\n[NEW]   Starting section - ${1}"
-	echo -e "${to_print}" 1>>${LOG_FILE}
+    to_print="\n[NEW]   Starting section - ${1}"
+    echo -e "${to_print}" 1>>${LOG_FILE}
 
-	# Colorise the message.
-	to_print="${to_print/\[NEW\]/${SECTION_HEADER_COLOR}[NEW]${NO_COLOR}}"
-	to_print="${to_print//${1}/${SECTION_HEADER_COLOR}${1}${NO_COLOR}}"
+    # Colorise the message.
+    to_print="${to_print/\[NEW\]/${SECTION_HEADER_COLOR}[NEW]${NO_COLOR}}"
+    to_print="${to_print//${1}/${SECTION_HEADER_COLOR}${1}${NO_COLOR}}"
 
-	echo -e "${to_print}"
-	return 0
+    echo -e "${to_print}"
+    return 0
 }
