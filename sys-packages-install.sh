@@ -28,7 +28,7 @@ sys_pkgs_install()
         ## Uncomment the repository as when needed. Look at
         ## https://itsfoss.com/ubuntu-repositories/ for more details.
 
-        # add-apt-repository universe 1>>${LOG_FILE} 2>&1
+        add-apt-repository universe 1>>${LOG_FILE} 2>&1
         # add-apt-repository restricted 1>>${LOG_FILE} 2>&1
         # add-apt-repository multiverse 1>>${LOG_FILE} 2>&1
 
