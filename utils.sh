@@ -37,12 +37,12 @@ print_info_message()
 	echo -e "[INFO]  ${1}" 1>>${LOG_FILE}
 
 	# Colorise the message.
-	to_print="${INFO_MSG} $1"
-	if [ -n $2 ]; then
-		to_print="${to_print/$2/${INFO_COLOR_2}$2${NO_COLOR}}"
+	to_print="${INFO_MSG}  ${1}"
+	if [ -n "$2" ]; then
+		to_print="${to_print//$2/${INFO_COLOR_2}$2${NO_COLOR}}"
 	fi
 
-	echo -e ${to_print}
+	echo -e "${to_print}"
 	return 0
 }
 
@@ -56,12 +56,11 @@ print_error_message()
 	echo -e "[ERROR] ${1}\n" 1>>${LOG_FILE}
 
 	# Colorise the message.
-	to_print="${ERROR_MSG} $1"
-	if [ -n $2 ]; then
-		to_print="${to_print/$2/${INFO_COLOR_2}$2${NO_COLOR}}"
+	to_print="${ERROR_MSG} ${1}"
+	if [ -n "$2" ]; then
+		to_print="${to_print//$2/${INFO_COLOR_2}$2${NO_COLOR}}"
 	fi
 
-	echo -e ${to_print} 1>&2
-	echo -e "Please see the log file at ${LOG_FILE} for more information.\n" 1>&2
+	echo -e "${to_print}. Please see the log file at ${LOG_FILE} for more information.\n" 1>&2
 	return 0
 }
