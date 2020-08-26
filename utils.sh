@@ -13,6 +13,7 @@ LOG_FILE=${LOG_DIR}/sys-setup.log
 ERROR_COLOR='\033[0;31m'
 INFO_COLOR='\033[1;32m'
 INFO_COLOR_2='\033[1;33m'
+SECTION_HEADER_COLOR='\033[1;34m'
 NO_COLOR='\033[0m'
 
 ## Colored prefix for error and information messages.
@@ -62,5 +63,19 @@ print_error_message()
 	fi
 
 	echo -e "${to_print}. Please see the log file at ${LOG_FILE} for more information.\n" 1>&2
+	return 0
+}
+
+## Wrapper for the echo message which is displayed at the starting of a phase
+print_section_start_message()
+{
+	to_print="\n[NEW]   Starting section - ${1}"
+	echo -e "${to_print}" 1>>${LOG_FILE}
+
+	# Colorise the message.
+	to_print="${to_print/\[NEW\]/${SECTION_HEADER_COLOR}[NEW]${NO_COLOR}}"
+	to_print="${to_print//${1}/${SECTION_HEADER_COLOR}${1}${NO_COLOR}}"
+
+	echo -e "${to_print}"
 	return 0
 }
