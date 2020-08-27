@@ -1,0 +1,16 @@
+- defaults:
+    link:
+      relink: true
+      create: true
+      force: true
+      
+- clean: ['~']
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
+
+- link:
+    ~/.dotfiles: ''
+    ~/.emacs: emacs
+    ~/.gitconfig: gitconfig
+    ~/.shell_aliases: shell_aliases

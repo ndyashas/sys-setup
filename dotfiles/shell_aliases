@@ -1,0 +1,7 @@
+alias cdo='cd $OLDPWD'
+alias r='reset'
+alias a='ls -l'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias 'glog'='git log --all --graph'
