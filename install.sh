@@ -16,10 +16,10 @@ fi
 ## Import all the library functions.
 . ./utils.sh
 . ./sys-packages-install.sh
-. ./app-packages-install.sh
+. ./custom-packages-install.sh
 
 ## Setup logging infrastructure.
-## This is a function defined in the `utild.sh` file.
+## This is a function defined in the `utils.sh` file.
 setup_logging
 
 ## Start system setup.
@@ -29,7 +29,7 @@ print_section_start_message "system setup at $(date)"
 print_section_start_message "system packages installation"
 sys_pkgs_install
 
-## Install all the application packages, preferably
+## Install all the custom packages, preferably
 ## in the user's home directory
-print_section_start_message "application packages installation"
-app_pkgs_install
+print_section_start_message "custom packages installation"
+custom_pkgs_install
