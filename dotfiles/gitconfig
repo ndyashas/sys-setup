@@ -1,0 +1,10 @@
+[user]
+	email = ndyashas@gmail.com
+	name = Yashas ND
+	signingkey = E44F7A9CE7F91D82
+[commit]
+	gpgsign = true
+[core]
+	editor = emacs
+[push]
+	followTags = true
