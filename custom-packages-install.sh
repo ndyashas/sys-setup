@@ -10,12 +10,13 @@
 ## functions.
 declare -a custom_install_funcs_array
 
-dummy_func ()
+dotbot_dispatch ()
 {
-    return 0
+    dotfiles/install 1>>${LOG_FILE} 2>&1
+    return "$?"
 }
 
-custom_install_funcs_array=("${custom_install_funcs_array[@]}" "dummy_func")
+custom_install_funcs_array=("${custom_install_funcs_array[@]}" "dotbot_dispatch")
 
 
 custom_pkgs_install()
