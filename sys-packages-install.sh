@@ -4,13 +4,23 @@
 # listed in the ${TMP_SYS_INSTALLER_ROOT}/sys-packages-data.sh.   #
 ###################################################################
 
+## Array containing packages that need to be installed.
+declare -a pkgs_to_install=("wget"
+                            "curl"
+                            "git"
+                            "emacs"
+                            "zsh"
+                            "screen")
+
+## Array containing ppa repos that need to be added.
+declare -a ppa_repos
+
 
 ## The main function for handling package installation in the system.
 sys_pkgs_install()
 {
     ## Import the required files.
     . ./utils.sh
-    . ./sys-packages-data.sh
 
     ## Check for `apt`, then update and upgrade the system.
     apt-get --version 1>/dev/null 2>/dev/null
