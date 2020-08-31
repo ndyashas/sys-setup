@@ -9,7 +9,6 @@ declare -a pkgs_to_install=("wget"
                             "curl"
                             "git"
                             "emacs"
-                            "zsh"
                             "screen")
 
 ## Array containing ppa repos that need to be added.
