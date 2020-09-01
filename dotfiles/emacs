@@ -103,3 +103,5 @@
 
 
 ;; (ivy-mode 1)
+
+(setq scheme-program-name "guile")
