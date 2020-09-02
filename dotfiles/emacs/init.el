@@ -9,7 +9,7 @@
 (autoload 'haskell-org-mode "haskell-org")
 
 ;;Haskell.
-;; (setq haskell-process-args-ghci '("-optL -q" "-XFlexibleInstances" "-XTypeSynonymInstances" "-XNoMonomorphismRestriction" "-i/home/yashas/flo-hask"))
+(setq haskell-process-args-ghci '("-optL -q" "-XFlexibleInstances" "-XTypeSynonymInstances" "-XNoMonomorphismRestriction"))
 
 (require 'haskell-interactive-mode)
 (require 'haskell-process)
@@ -40,7 +40,7 @@
 (set-selection-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
 
-(setq haskell-compile-command "ghci -v -optL -q -XFlexibleInstances -XTypeSynonymInstances -XNoMonomorphismRestriction -i/home/yashas/flo-hask")
+(setq haskell-compile-command "ghci -v -optL -q -XFlexibleInstances -XTypeSynonymInstances -XNoMonomorphismRestriction")
 
 
 (custom-set-faces
