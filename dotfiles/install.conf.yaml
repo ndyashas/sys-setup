@@ -11,6 +11,7 @@
 
 - link:
     ~/.dotfiles: ''
-    ~/.emacs: emacs
+    ~/.bashrc: bashrc
+    ~/.emacs.d: emacs
     ~/.gitconfig: gitconfig
-    ~/.shell_aliases: shell_aliases
+    ~/.bash_aliases: shell_aliases
