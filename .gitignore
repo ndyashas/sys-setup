@@ -9,3 +9,7 @@ cache/
 log/
 *.swp
 .DS_Store
+
+# Ignore the extra directories created under .emacs.d until I figure out what can be added there.
+dotfiles/emacs/elpa/
+dotfiles/emacs/auto-save-list/

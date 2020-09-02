@@ -52,10 +52,10 @@
 
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 
-(require 'yaml-mode)
-    (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
+;; (require 'yaml-mode)
+;;     (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
 
-(add-to-list 'backup-directory-alist (cons "." "~/.emacs.d/backup/"))
+(add-to-list 'backup-directory-alist (cons "." "~/.emacs.extra/backup/"))
 ;; (setq-default tab-width 4)
 
 (set-frame-parameter (selected-frame) 'alpha '(85 . 50))
