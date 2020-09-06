@@ -9,7 +9,8 @@ declare -a pkgs_to_install=("wget"
                             "curl"
                             "git"
                             "emacs"
-                            "screen")
+                            "screen"
+                            "python3-pip")
 
 ## Array containing ppa repos that need to be added.
 declare -a ppa_repos

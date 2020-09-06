@@ -10,6 +10,15 @@
 ## functions.
 declare -a custom_install_funcs_array
 
+python_virtual_environment_setup ()
+{
+    pip3 install virtualenv virtualenvwrapper 1>>${LOG_FILE} 2>&1
+    return "$?"
+}
+
+custom_install_funcs_array=("${custom_install_funcs_array[@]}" "python_virtual_environment_setup")
+
+
 dotbot_dispatch ()
 {
     dotfiles/install 1>>${LOG_FILE} 2>&1
