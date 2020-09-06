@@ -1,0 +1,14 @@
+# Disable the GNU/Screen splash screen
+startup_message off
+
+# Increase the scrollback length
+defscrollback 20000
+
+# Detach on hangup
+autodetach on
+
+# Terminal color
+term screen-256color
+
+# Use X scrolling mechanism
+termcapinfo xterm* ti@:te@
