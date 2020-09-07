@@ -32,7 +32,7 @@
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (yaml-mode dante auto-complete csv-mode auto-correct processing-mode org-edna))))
+    (htmlize yaml-mode dante auto-complete csv-mode auto-correct processing-mode org-edna))))
 ; To display ghc msg quote chars...
 (setq locale-coding-system 'utf-8)
 (set-terminal-coding-system 'utf-8-unix)
@@ -107,7 +107,7 @@
 (setq scheme-program-name "guile")
 
 ;; Resizing window bindings
-(global-set-key (kbd "<C-up>") 'shrink-window)
-(global-set-key (kbd "<C-down>") 'enlarge-window)
-(global-set-key (kbd "<C-left>") 'shrink-window-horizontally)
-(global-set-key (kbd "<C-right>") 'enlarge-window-horizontally)
+(global-set-key (kbd "S-C-<up>") 'shrink-window)
+(global-set-key (kbd "S-C-<down>") 'enlarge-window)
+(global-set-key (kbd "S-C-<left>") 'shrink-window-horizontally)
+(global-set-key (kbd "S-C-<right>") 'enlarge-window-horizontally)
