@@ -9,6 +9,3 @@ autodetach on
 
 # Terminal color
 term screen-256color
-
-# Use X scrolling mechanism
-termcapinfo xterm* ti@:te@
