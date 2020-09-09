@@ -4,4 +4,7 @@ alias a='ls -l'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
-alias 'glog'='git log --all --graph'
+
+# Git aliases (Kept here so that all aliases are in one place)
+alias st='git status'
+alias glog='git log --all --graph'
