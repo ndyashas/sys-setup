@@ -1,11 +1,49 @@
+# Mostly added emacs-like keybindings for 'regions'
+
+# ------------------------------------------------------------------------------
+# SCREEN SETTINGS
+# ------------------------------------------------------------------------------
+
 # Disable the GNU/Screen splash screen
 startup_message off
 
 # Increase the scrollback length
 defscrollback 20000
 
-# Detach on hangup
-autodetach on
+
+# ------------------------------------------------------------------------------
+# KEYBINDINGS
+# ------------------------------------------------------------------------------
+
+# Bind the C-A o key for shifting focus to next region
+# consistent with emacs' shifting focus to next region
+bind o focus
+
+# Remove all regions from view except the current one.
+# consistent with emacs
+bind 1 only
+
+# Toggling back and forth between regions
+# consistent with emacs' toggling
+bind ^a
+bind b other
+
+# Splitting the current region horizontally
+# consistent with emacs
+bind 2 split
+
+# Splitting the current region horizontally
+# consistent with emacs
+bind 3 split -v
+
+# Change the locking. It just gets in the way *sigh*
+bind ^x
+bind ^l lockscreen
+
+
+# ------------------------------------------------------------------------------
+# TERMINAL SETTINGS
+# ------------------------------------------------------------------------------
 
 # Terminal color
 term screen-256color
