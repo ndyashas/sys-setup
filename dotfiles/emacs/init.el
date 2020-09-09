@@ -111,3 +111,6 @@
 (global-set-key (kbd "S-C-<down>") 'enlarge-window)
 (global-set-key (kbd "S-C-<left>") 'shrink-window-horizontally)
 (global-set-key (kbd "S-C-<right>") 'enlarge-window-horizontally)
+
+;; Disable the behaviour of centering the cursor on moving out of visible buffer boundary
+(setq scroll-conservatively 100)
