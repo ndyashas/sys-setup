@@ -6,5 +6,5 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 
 # Git aliases (Kept here so that all aliases are in one place)
-alias st='git status'
+alias s='git status'
 alias glog='git log --all --graph'
