@@ -1,0 +1,20 @@
+* sys-setup
+
+This repository contains scripts that perform all the initial setup and configuration for my machine when I make a fresh install. Currently the script expects the =apt= tool for package management, and thus works only on Debian machines.
+
+** Scripts
+
+- *install.sh* :: This is the main script for setting up the system. This script invokes various sub-functions for system package installation, dotfile configuration etc.
+
+- *utils.sh* :: This file contains the global variables for logging, install-dir etc. additionally, information and error logging wrappers are also defined in this file.
+
+- *sys-packages-install.sh* :: This is the file that is run first by the tool. This script defines the ~sys_pkg_install~ function. This function installs/adds all the packages/ppa repos listed in the ~pkgs_to_install~ array.
+
+
+- *sys-custom-packages-install.sh* :: This script runs the installation of various custom packages. The installation steps can get very specific to each package, thus, it is better to have separate functions for installing each package.
+
+- *custom-packages-install.sh* :: This script is similar to the =sys-custom-packages-install.sh= script except that the functions written in this script are not executed with root privilages. This might be desired for some packages such as installing python libraries from =pip=, executing some other script as a normal user etc.
+
+** Additional configuration
+
+Although all system setup and configuration can be done using the scripts mentioned in the [[*Scripts][Scripts]] section, it is better to use other tools which are meant for this purpose. I use the [[https://github.com/anishathalye/dotbot][Dotbot]] utility for managing some of the dotfiles I care about. The configuration of these dotfiles is done by just running the =dotbot/install= script as a normal user.

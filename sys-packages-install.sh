@@ -1,7 +1,7 @@
 ###################################################################
 # This script defines the `sys_pkg_install` function when this    #
 # function is called, it installs/adds all the packages/ppa repos #
-# listed in the ${TMP_SYS_INSTALLER_ROOT}/sys-packages-data.sh.   #
+# listed in the pkgs_to_install array                             #
 ###################################################################
 
 ## Array containing packages that need to be installed.
