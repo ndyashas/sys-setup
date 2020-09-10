@@ -17,4 +17,4 @@ This repository contains scripts that perform all the initial setup and configur
 
 ** Additional configuration
 
-Although all system setup and configuration can be done using the scripts mentioned in the =Scripts= section, it is better to use other tools which are meant for this purpose. I use the [[https://github.com/anishathalye/dotbot][Dotbot]] utility for managing some of the dotfiles I care about. The configuration of these dotfiles is done by just running the =dotbot/install= script as a normal user.
+Although all system setup and configuration can be done using the scripts mentioned in the /Scripts/ section, it is better to use other tools which are meant for this purpose. I use the [[https://github.com/anishathalye/dotbot][Dotbot]] utility for managing some of the dotfiles I care about. The configuration of these dotfiles is done by just running the =dotbot/install= script as a normal user.
