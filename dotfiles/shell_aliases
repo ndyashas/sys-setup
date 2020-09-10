@@ -7,4 +7,4 @@ alias ....='cd ../../..'
 
 # Git aliases (Kept here so that all aliases are in one place)
 alias s='git status'
-alias glog='git log --all --graph'
+alias glog='git log --all --graph --decorate=full'
