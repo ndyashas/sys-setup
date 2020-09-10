@@ -25,7 +25,6 @@ bind 1 only
 
 # Toggling back and forth between regions
 # consistent with emacs' toggling
-bind ^a
 bind b other
 
 # Splitting the current region horizontally
