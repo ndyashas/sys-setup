@@ -1,5 +1,5 @@
 #####################################################################
-# This package runs the installation of various custom packages     #
+# This script runs the installation of various custom packages      #
 # the installation steps can get very specific to each package,     #
 # thus, it is better to have separate functions for installing each #
 # package.                                                          #
