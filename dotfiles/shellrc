@@ -1,6 +1,12 @@
 # Additional shell setup commands
 # to execute when a new shell is invoked.
 
+
+# Setup aliases
+if [ -f "${HOME}/".dotfiles/shell_aliases ]; then
+    . "${HOME}/".dotfiles/shell_aliases
+fi
+
 # Local bin paths
 export PATH=$PATH:$HOME/.local/bin
 

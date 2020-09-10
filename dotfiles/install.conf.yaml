@@ -6,14 +6,8 @@
       
 - clean: ['~']
 
-- shell:
-    - [git submodule update --init --recursive, Installing submodules]
-
 - link:
     ~/.dotfiles: ''
     ~/.bashrc: bashrc
-    ~/.shellrc: shellrc
-    ~/.screenrc: screenrc
     ~/.emacs.d: emacs
     ~/.gitconfig: gitconfig
-    ~/.bash_aliases: shell_aliases
