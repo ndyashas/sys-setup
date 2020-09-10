@@ -1,0 +1,10 @@
+# Additional shell setup commands
+# to execute when a new shell is invoked.
+
+# Local bin paths
+export PATH=$PATH:$HOME/.local/bin
+
+# Python virtual env setup
+export WORKON_HOME=$HOME/.virtualenvs
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+source $HOME/.local/bin/virtualenvwrapper.sh

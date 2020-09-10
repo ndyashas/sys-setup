@@ -12,6 +12,7 @@
 - link:
     ~/.dotfiles: ''
     ~/.bashrc: bashrc
+    ~/.shellrc: shellrc
     ~/.screenrc: screenrc
     ~/.emacs.d: emacs
     ~/.gitconfig: gitconfig
