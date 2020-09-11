@@ -9,7 +9,7 @@ alias ....='cd ../../..'
 
 # Git aliases (Kept here so that all aliases are in one place)
 alias s='git status'
-alias glog='git log --all --graph --decorate=full'
+alias glog='git log --all --graph --decorate=auto'
 
 # Alias for screen. I like to keep as many conf files
 # in $HOME/.dotfiles and not $HOME.
