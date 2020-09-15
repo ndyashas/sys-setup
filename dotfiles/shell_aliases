@@ -14,3 +14,6 @@ alias glog='git log --all --graph --decorate=auto'
 # Alias for screen. I like to keep as many conf files
 # in $HOME/.dotfiles and not $HOME.
 alias screen='screen -c ${HOME}/.dotfiles/screenrc'
+
+# Alias for tmux. Same reason as for screen
+alias tmux='tmux -f ${HOME}/.dotfiles/tmux.conf'
