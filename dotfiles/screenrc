@@ -31,7 +31,7 @@ bind b other
 # consistent with emacs
 bind 2 split
 
-# Splitting the current region horizontally
+# Splitting the current region vertically
 # consistent with emacs
 bind 3 split -v
 
