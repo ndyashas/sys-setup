@@ -8,9 +8,19 @@ if [ -f "${HOME}/".dotfiles/shell_aliases ]; then
 fi
 
 # Local bin paths
-export PATH=$PATH:$HOME/.local/bin
+if [ -f "${HOME}"/.local-shellrc ]; then
+    export PATH=$PATH:$HOME/.local/bin;
+fi
 
 # Python virtual env setup
-export WORKON_HOME=$HOME/.virtualenvs
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-source $HOME/.local/bin/virtualenvwrapper.sh
+if [ -d "${HOME}"/.virtualenvs ]; then
+    export WORKON_HOME=$HOME/.virtualenvs
+    export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+    source $HOME/.local/bin/virtualenvwrapper.sh
+fi
+
+
+# Any local configs
+if [ -f "${HOME}"/.local-shellrc ]; then
+    . "${HOME}"/.local-shellrc
+fi
