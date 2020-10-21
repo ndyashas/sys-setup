@@ -14,3 +14,4 @@ log/
 dotfiles/emacs/elpa/
 dotfiles/emacs/auto-save-list/
 dotfiles/emacs/tramp
+dotfiles/emacs/session.*
