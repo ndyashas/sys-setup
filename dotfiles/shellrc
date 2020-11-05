@@ -13,7 +13,7 @@ if [ -f "${HOME}"/.local-shellrc ]; then
 fi
 
 # Python virtual env setup
-if [ -d "${HOME}"/.virtualenvs ]; then
+if [ -f $HOME/.local/bin/virtualenvwrapper.sh ]; then
     export WORKON_HOME=$HOME/.virtualenvs
     export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
     source $HOME/.local/bin/virtualenvwrapper.sh
