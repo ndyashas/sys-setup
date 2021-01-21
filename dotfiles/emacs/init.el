@@ -114,7 +114,7 @@
 
 ;; Disable the behaviour of centering the cursor on moving out of visible buffer boundary
 (setq scroll-conservatively 100)
-(setq scroll-margin 7)
+;; (setq scroll-margin 7)
 
-(setq hscroll-margin 10)
-(setq hscroll-step 1)
+;; (setq hscroll-margin 10)
+;; (setq hscroll-step 1)
