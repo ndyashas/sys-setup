@@ -2,9 +2,13 @@
 	email = ndyashas@gmail.com
 	name = Yashas ND
 	signingkey = 6B8F76E9AC3131DA
+[format]
+	signoff=true
 [commit]
 	gpgsign = true
 [core]
 	editor = emacs
 [push]
 	followTags = true
+[include]
+	path = ~/.gitconfig_local
