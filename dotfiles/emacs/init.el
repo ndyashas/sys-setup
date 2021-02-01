@@ -58,8 +58,8 @@
 (add-to-list 'backup-directory-alist (cons "." "~/.emacs.extra/backup/"))
 ;; (setq-default tab-width 4)
 
-(set-frame-parameter (selected-frame) 'alpha '(85 . 50))
-(add-to-list 'default-frame-alist '(alpha . (85 . 50)))
+;; (set-frame-parameter (selected-frame) 'alpha '(85 . 50))
+;; (add-to-list 'default-frame-alist '(alpha . (85 . 50)))
 
 
 ;; ;; Linux coding style
