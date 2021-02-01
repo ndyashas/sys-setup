@@ -32,7 +32,7 @@
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (htmlize yaml-mode dante auto-complete csv-mode auto-correct processing-mode org-edna))))
+    (geiser htmlize yaml-mode dante auto-complete csv-mode auto-correct processing-mode org-edna))))
 ; To display ghc msg quote chars...
 (setq locale-coding-system 'utf-8)
 (set-terminal-coding-system 'utf-8-unix)
