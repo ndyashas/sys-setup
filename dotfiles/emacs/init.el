@@ -105,6 +105,7 @@
 ;; (ivy-mode 1)
 
 (setq scheme-program-name "guile")
+(setq geiser-guile-binary '("/usr/bin/guile" "--fresh-auto-compile"))
 
 ;; Resizing window bindings
 (global-set-key (kbd "S-C-<up>") 'shrink-window)
