@@ -19,6 +19,11 @@ if [ -f $HOME/.local/bin/virtualenvwrapper.sh ]; then
     source $HOME/.local/bin/virtualenvwrapper.sh
 fi
 
+# Gems stuff
+if [ -d $HOME/gems ]; then
+    export GEM_HOME="$HOME/gems"
+    export PATH="$HOME/gems/bin:$PATH"
+fi
 
 # Any local configs
 if [ -f "${HOME}"/.local-shellrc ]; then
