@@ -113,6 +113,13 @@
 (global-set-key (kbd "S-C-<left>") 'shrink-window-horizontally)
 (global-set-key (kbd "S-C-<right>") 'enlarge-window-horizontally)
 
+;; Easy switch between visible buffers
+(global-set-key (kbd "C-x <up>") 'windmove-up)
+(global-set-key (kbd "C-x <down>") 'windmove-down)
+(global-set-key (kbd "C-x <left>") 'windmove-left)
+(global-set-key (kbd "C-x <right>") 'windmove-right)
+
+
 ;; Disable the behaviour of centering the cursor on moving out of visible buffer boundary
 (setq scroll-conservatively 100)
 ;; (setq scroll-margin 7)
