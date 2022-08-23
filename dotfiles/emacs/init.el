@@ -4,17 +4,17 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 
-(setq auto-mode-alist (append (rassq-delete-all 'literate-haskell-mode auto-mode-alist) '(("\\.lhs$"  . haskell-org-mode))))
+;; (setq auto-mode-alist (append (rassq-delete-all 'literate-haskell-mode auto-mode-alist) '(("\\.lhs$"  . haskell-org-mode))))
 
-(autoload 'haskell-org-mode "haskell-org")
+;; (autoload 'haskell-org-mode "haskell-org")
 
-;;Haskell.
-(setq haskell-process-args-ghci '("-optL -q" "-XFlexibleInstances" "-XTypeSynonymInstances" "-XNoMonomorphismRestriction"))
+;; ;;Haskell.
+;; (setq haskell-process-args-ghci '("-optL -q" "-XFlexibleInstances" "-XTypeSynonymInstances" "-XNoMonomorphismRestriction"))
 
-(require 'haskell-interactive-mode)
-(require 'haskell-process)
-(add-hook 'haskell-mode-hook 'interactive-haskell-mode)
-(setq haskell-process-type 'ghci)
+;; (require 'haskell-interactive-mode)
+;; (require 'haskell-process)
+;; (add-hook 'haskell-mode-hook 'interactive-haskell-mode)
+;; (setq haskell-process-type 'ghci)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -40,7 +40,7 @@
 (set-selection-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
 
-(setq haskell-compile-command "ghci -v -optL -q -XFlexibleInstances -XTypeSynonymInstances -XNoMonomorphismRestriction")
+;; (setq haskell-compile-command "ghci -v -optL -q -XFlexibleInstances -XTypeSynonymInstances -XNoMonomorphismRestriction")
 
 
 (custom-set-faces
@@ -104,8 +104,8 @@
 
 ;; (ivy-mode 1)
 
-(setq scheme-program-name "guile")
-(setq geiser-guile-binary '("/usr/bin/guile" "--fresh-auto-compile"))
+;; (setq scheme-program-name "guile")
+;; (setq geiser-guile-binary '("/usr/bin/guile" "--fresh-auto-compile"))
 
 ;; Resizing window bindings
 (global-set-key (kbd "S-C-<down>") 'shrink-window)
