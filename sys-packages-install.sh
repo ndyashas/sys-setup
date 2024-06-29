@@ -25,51 +25,51 @@ sys_pkgs_install()
     ## Check for `apt`, then update and upgrade the system.
     apt-get --version 1>/dev/null 2>/dev/null
 
-    if ! [ "$?" = "0" ]; then
-        print_error_message "Error encountered while testing for package apt" "apt"
-        exit 1
-    else
-        print_info_message "Adding standard repositories"
-        add-apt-repository main 1>>${LOG_FILE} 2>&1
+    # if ! [ "$?" = "0" ]; then
+    #     print_error_message "Error encountered while testing for package apt" "apt"
+    #     exit 1
+    # else
+    #     print_info_message "Adding standard repositories"
+    #     add-apt-repository main 1>>${LOG_FILE} 2>&1
 
-        ## TODO: Define the repositories in an array. Possibly in
-        ## the `sys-packages-data.sh` file?
+    #     ## TODO: Define the repositories in an array. Possibly in
+    #     ## the `sys-packages-data.sh` file?
 
-        ## Uncomment the repository as when needed. Look at
-        ## https://itsfoss.com/ubuntu-repositories/ for more details.
+    #     ## Uncomment the repository as when needed. Look at
+    #     ## https://itsfoss.com/ubuntu-repositories/ for more details.
 
-        add-apt-repository universe 1>>${LOG_FILE} 2>&1
-        # add-apt-repository restricted 1>>${LOG_FILE} 2>&1
-        # add-apt-repository multiverse 1>>${LOG_FILE} 2>&1
+    #     add-apt-repository universe 1>>${LOG_FILE} 2>&1
+    #     # add-apt-repository restricted 1>>${LOG_FILE} 2>&1
+    #     # add-apt-repository multiverse 1>>${LOG_FILE} 2>&1
 
-        print_info_message "Updating and upgrading system"
-        apt-get update 1>>${LOG_FILE} 2>&1
-        apt-get upgrade -y 1>>${LOG_FILE} 2>&1
-    fi
+    #     print_info_message "Updating and upgrading system"
+    #     apt-get update 1>>${LOG_FILE} 2>&1
+    #     apt-get upgrade -y 1>>${LOG_FILE} 2>&1
+    # fi
 
-    if ! [ "$?" = "0" ]; then
-        print_error_message "Error encountered while updating and upgrading system"
-        exit 1
-    fi
-
-
-    ## Adding any user supplied ppa reppositories.
-    declare -a ppa_repos_failed_to_install
-
-    for ppa_repo in "${ppa_repos[@]}"
-    do
-        print_info_message "Adding ppa repository ${ppa_repo}"
-        echo add-apt-repository "${ppa_repo}" -y 1>>${LOG_FILE} 2>&1
-
-        if ! [ "$?" = "0" ]; then
-            print_error_message "Error encountered while adding ppa repository ${ppa_repo}" "${ppa_repo}"
-            ppa_repos_failed_to_install=("${ppa_repos_failed_to_install[@]}" "${ppa_rep}")
-        fi
-    done
+    # if ! [ "$?" = "0" ]; then
+    #     print_error_message "Error encountered while updating and upgrading system"
+    #     exit 1
+    # fi
 
 
-    ## Install required packages.
-    declare -a pkgs_failed_to_install
+    # ## Adding any user supplied ppa reppositories.
+    # declare -a ppa_repos_failed_to_install
+
+    # for ppa_repo in "${ppa_repos[@]}"
+    # do
+    #     print_info_message "Adding ppa repository ${ppa_repo}"
+    #     echo add-apt-repository "${ppa_repo}" -y 1>>${LOG_FILE} 2>&1
+
+    #     if ! [ "$?" = "0" ]; then
+    #         print_error_message "Error encountered while adding ppa repository ${ppa_repo}" "${ppa_repo}"
+    #         ppa_repos_failed_to_install=("${ppa_repos_failed_to_install[@]}" "${ppa_rep}")
+    #     fi
+    # done
+
+
+    # ## Install required packages.
+    # declare -a pkgs_failed_to_install
 
     for pkg in "${pkgs_to_install[@]}"
     do

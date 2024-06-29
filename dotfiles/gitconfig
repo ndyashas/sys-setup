@@ -1,14 +1,9 @@
 [user]
 	email = ndyashas@gmail.com
-	name = Yashas ND
-	signingkey = 52B1524A2BAF5AE5
-[format]
-	signoff=true
-[commit]
-	gpgsign = true
+	name = Yashas Nagavane Dattatreya
 [core]
-	editor = emacs
-[push]
-	followTags = true
+	editor = emacs -nw
 [include]
 	path = ~/.gitconfig_local
+[init]
+	defaultBranch = main

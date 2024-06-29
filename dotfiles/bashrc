@@ -111,3 +111,4 @@ fi
 if [ -f "${HOME}/".dotfiles/shellrc ]; then
     . "${HOME}/".dotfiles/shellrc
 fi
+. "$HOME/.cargo/env"
